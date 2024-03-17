@@ -1,0 +1,63 @@
+One short about bit manipulation.
+
+- As we all know how decimal numbers will convert into binary numbers and vice versa.
+- If you don't then please check out this video https://www.youtube.com/watch?v=qQd-ViW7bfk
+
+- What is the 1's compliment:
+    - if we have a number (13) --> binary of this number is --> (1101).
+    - Now 1's compliment is nothing but just flipping the bits. 
+    - Hence 1's compliment of (1101) is nothing but the (0010) that is 2 in decimal.
+
+- What is the 2's compliment?
+    - Step-01: Calculate 1's compliment
+    - Step-02: add 1 into it.
+    - if we have a number (13) --> binary of this number is --> (1101).
+    - Now 1's compliment is nothing but just flipping the bits. 
+    - Hence 1's compliment of (1101) is nothing but the (0010).
+    - Now just add 1 into it, it will be 0011. This is the 2's compliment.
+
+- Let's, start with the bit manipulation operations (AND, OR, XOR, NOT, Shift)
+    - AND(&): If both the bits are 1, 1 then result will be 1
+        T T --> T
+        T F --> F
+        F T --> F
+        F F --> F
+    
+    - OR(|): If any bit's are T then result will be 1.
+        T T --> T
+        T F --> T
+        F T --> T
+        F F --> F
+
+    - XOR(^): If even bits then 0, else 1
+        T T --> F
+        T F --> T
+        F T --> T
+        F F --> F
+
+    - NOT(~): It just flipping the bits.
+        T --> F
+        F --> T
+        Step:
+            1. flipping of bits
+            2. Check For Negative
+                   /      \
+                  /        \
+                 /          \
+              (Yes)        (No)
+          2's compliment   Stop
+
+    - Shift:
+        1. Left Shift:
+
+        2. Right Shift:
+            - Let's take one example. x = 13 >> 1
+            - binary of 13 is (1101) Now rigth Shift nothing but the shift all the bits to right side.
+            - hence 1101 will be shifted right side by 1:: So the answer is the (110).
+            - That's why the answer of 13 >> 1 == 6.
+            - Formula for right shift is: if x >> k == x / 2^k.
+        
+    - How dose the computer store the -13 and +13?
+      --> As we know int has 32bits. and the leftmost bit is use for the sign. If the left most sign is 0: Positive 1: Negative
+
+//// Thank You ////
